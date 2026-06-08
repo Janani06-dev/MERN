@@ -10,7 +10,7 @@ const verify = require("./middleware/verifyToken");
 const app =  express();
 const userdb = require('./model/userdb');
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));npm 
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true 
