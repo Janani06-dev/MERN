@@ -12,7 +12,7 @@ const userdb = require('./model/userdb');
 app.use(express.json());
 app.use(express.urlencoded({extended:true})); 
 app.use(cors({
-    origin: "https://mern-a-0owt.onrender.com",
+    origin: "https://mern-10-kn5z.onrender.com",
     credentials: true 
 }));
 
