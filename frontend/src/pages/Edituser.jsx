@@ -8,7 +8,7 @@ function EditUserForm() {
     const [formData, setFormData] = useState({ username: "", email: "", age: "", course: "" });
 
     useEffect(() => {
-          const response = axios.get(`http://localhost:3000/users/${id}`).then((response)=>{  
+          const response = axios.get(`${import.meta.env.VITE_API_URL}/users/${id}`).then((response)=>{  
             setFormData(response.data.data)
         });
   },[]);
@@ -19,7 +19,7 @@ function EditUserForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:3000/updateUser/${id}`, formData)
+        axios.put(`{import.meta.env.VITE_API_URL}/updateUser/${id}`, formData)
       .then(() =>{
         alert("User updated successfully");
         navigate("/crud");
