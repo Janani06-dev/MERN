@@ -21,7 +21,7 @@ function Crud(){
     let [udetails, setUserdetails] = useState([]);
 
     useEffect(()=>{
-        axios.get(`${import.meta.env.VITE_API_URL/read}`).then(res => {
+        axios.get("https://mern-a-0owt.onrender.com/read",).then(res => {
         setUserdetails(res.data.data); // because backend sends { data: details }
       });
     },[])
